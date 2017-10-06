@@ -1,0 +1,7 @@
+@mixin speed-normal {
+  transition: 400ms;
+}
+
+@mixin speed-fast {
+  transition: 200ms;
+}

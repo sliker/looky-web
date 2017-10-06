@@ -1,0 +1,35 @@
+@import "./variables";
+
+.title-dots {
+  padding: 10px 0;
+  width: 30px;
+}
+
+.text-white {
+  color: $white;
+}
+
+.orange {
+  color: $orange;
+}
+
+.grey-blue {
+  color: $grey-blue;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @media #{$medium} {
+    font-size: 42px;
+  }
+}
+
+.collapse-hidden {
+  display: block !important;
+  height: auto !important;
+  position: absolute;
+  visibility: hidden;
+}

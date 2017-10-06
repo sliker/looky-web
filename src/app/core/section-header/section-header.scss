@@ -1,0 +1,18 @@
+@import "../../../sass/variables";
+
+.section-title-header-container {
+  background: $dark-grey url(../../../assets/img/bg/bg-hero.jpg) center center;
+  height: 200px;
+  margin-bottom: $margin-default;
+  padding: 100px 0 40px;
+}
+
+.section-title-header {
+  color: $white;
+  text-transform: uppercase;
+}
+
+.section-title-header-title {
+  font-size: 36px;
+  font-weight: 700;
+}

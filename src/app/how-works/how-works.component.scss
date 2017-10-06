@@ -1,0 +1,70 @@
+@import "../../sass/variables";
+
+.how-works-container {
+  background-color: $white;
+  padding: 30px 0;
+
+  @media #{$medium} {
+    background: url(../../assets/img/bg/bg-bicolor.jpg) center center repeat-y;
+    padding: 90px 0;
+  }
+}
+
+.how-works-list-container {
+  padding: 20px 0;
+}
+
+.how-works-list {
+  clear: both;
+  display: block;
+  margin: 20px 0;
+  padding: 0 10px;
+
+  @media #{$small} {
+    display: flex;
+    padding: 0 40px;
+  }
+}
+
+.how-works-list-icon {
+  float: none;
+  height: 90px;
+  margin: 0 auto;
+  padding: 18px;
+  text-align: center;
+  width: 90px;
+
+  @media #{$small} {
+    float: left;
+    height: 100%;
+  }
+
+  span {
+    color: $orange;
+    font-size: 54px;
+    line-height: 54px;
+  }
+}
+
+.how-works-list-data {
+  line-height: 20px;
+  text-align: center;
+
+  @media #{$small} {
+    text-align: left;
+  }
+}
+
+.how-works-list-title {
+  color: $grey-blue;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.how-works-list-text {
+  color: $grey;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+}

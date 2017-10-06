@@ -1,0 +1,129 @@
+/* stylelint-disable */
+
+@font-face {
+  font-family: 'looky';
+  font-style: normal;
+  font-weight: normal;
+  src:  url('/assets/fonts/looky.eot?5ji9hg');
+  src:  url('/assets/fonts/looky.eot?5ji9hg#iefix') format('embedded-opentype'),
+  url('/assets/fonts/looky.ttf?5ji9hg') format('truetype'),
+  url('/assets/fonts/looky.woff?5ji9hg') format('woff'),
+  url('/assets/fonts/looky.svg?5ji9hg#looky') format('svg');
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'looky' !important;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+
+  /* Better Font Rendering =========== */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-Pin:before {
+  content: "\e901";
+}
+.icon-Plus-Round:before {
+  content: "\e902";
+}
+.icon-Search:before {
+  content: "\e903";
+}
+.icon-Search-Old:before {
+  content: "\e904";
+}
+.icon-Sex-Female:before {
+  content: "\e905";
+}
+.icon-Sex-Male:before {
+  content: "\e906";
+}
+.icon-Share:before {
+  content: "\e907";
+}
+.icon-Twitter:before {
+  content: "\e908";
+}
+.icon-Camera:before {
+  content: "\e909";
+}
+.icon-Cat:before {
+  content: "\e90a";
+}
+.icon-Cat-Young:before {
+  content: "\e90d";
+}
+.icon-Cat-Adult:before {
+  content: "\e90b";
+}
+.icon-Cat-Old:before {
+  content: "\e90c";
+}
+.icon-Close:before {
+  content: "\e90e";
+}
+.icon-Close-Round:before {
+  content: "\e90f";
+}
+.icon-Dog:before {
+  content: "\e910";
+}
+.icon-Dog-Young:before {
+  content: "\e913";
+}
+.icon-Dog-Adult:before {
+  content: "\e911";
+}
+.icon-Dog-Old:before {
+  content: "\e912";
+}
+.icon-Dots:before {
+  content: "\e914";
+}
+.icon-Facebook:before {
+  content: "\e915";
+}
+.icon-Found:before {
+  content: "\e916";
+}
+.icon-Heart:before {
+  content: "\e917";
+}
+.icon-Instagram:before {
+  content: "\e918";
+}
+.icon-Logo-Looky:before {
+  content: "\e919";
+}
+.icon-Lost:before {
+  content: "\e91a";
+}
+.icon-Lost-Old:before {
+  content: "\e91b";
+}
+.icon-Message:before {
+  content: "\e91c";
+}
+.icon-Paw:before {
+  content: "\e91d";
+}
+.icon-Paw-Small:before {
+  content: "\e900";
+}
+.icon-Paw-Medium:before {
+  content: "\e91f";
+}
+.icon-Paw-Big:before {
+  content: "\e91e";
+}
+.icon-Alert:before {
+  content: "\e920";
+}
+
+/* stylelint-enable */

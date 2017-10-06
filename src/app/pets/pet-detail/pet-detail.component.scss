@@ -1,0 +1,187 @@
+@import "../../../sass/variables";
+
+$pet-detail-container-bg: #fff;
+$pet-detail-basic-characteristics-color: #fff;
+
+.pet-detail-container {
+  background-color: $pet-detail-container-bg;
+  border-radius: 5px;
+  margin: 40px auto;
+  max-width: $container-desktop;
+
+  @media #{$medium} {
+    margin: 80px auto;
+  }
+}
+
+.pet-detail-main-image {
+  width: 100%;
+}
+
+.pet-detail-user-data-container {
+  margin: 0 0 $margin-default;
+}
+
+.pet-detail-publish-date {
+  color: $grey;
+  font-size: 14px;
+  font-weight: 300;
+  padding-top: 4px;
+  text-transform: uppercase;
+
+  @media #{$medium} {
+    padding-top: 12px;
+  }
+}
+
+.pet-detail-user-display-name {
+  color: $grey-blue;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 16px;
+}
+
+.pet-detail-basic-characteristics {
+  color: $pet-detail-basic-characteristics-color;
+  margin-bottom: $margin-default;
+  padding: 10px;
+
+  img {
+    margin: 0 auto;
+    max-width: 50px;
+  }
+
+  .col-xs-4 {
+    padding: 0 5px;
+  }
+}
+
+.pet-detail-map-location {
+  height: 100%;
+  width: 100%;
+}
+
+.pet-detail-main-image-container {
+  border-radius: 12px;
+  margin-bottom: $margin-default;
+  overflow: hidden;
+  position: relative;
+}
+
+.pet-detail-map-btn {
+  background-color: $brand-primary;
+  border: 0;
+  border-radius: 50%;
+  height: 60px;
+  left: 10px;
+  position: absolute;
+  top: 10px;
+  width: 60px;
+  z-index: z('pet-map-button');
+
+  &:hover {
+    background-color: darken($brand-primary, 10%);
+  }
+
+  .icon-Pin {
+    color: $white;
+    font-size: 48px;
+    line-height: 60px;
+  }
+}
+
+.pet-detail-map-location-container {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: z('pet-map');
+}
+
+.pet-detail-date-container {
+  background-color: $grey-blue;
+  cursor: pointer;
+  padding: 10px;
+
+  span {
+    color: $pet-detail-basic-characteristics-color;
+  }
+
+  .icon {
+    color: $orange;
+    font-size: 40px;
+    padding: 10px;
+  }
+
+  &.pet-detail-date-container-retrieved {
+    background-color: $alert-success-bg;
+
+    span,
+    .icon {
+      color: $alert-success-text;
+    }
+  }
+}
+
+.pet-detail-date {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.pet-detail-user-photo {
+  height: 60px;
+  width: 60px;
+}
+
+.pet-detail-label-small {
+  color: $grey;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.pet-detail-label-medium {
+  color: $grey-blue;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.pet-detail-label-big {
+  color: $grey-blue;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 34px;
+  text-transform: uppercase;
+}
+
+.pet-detail-characteristic-icon {
+  color: $orange;
+  display: inline-block;
+  font-size: 42px;
+  line-height: 45px;
+  padding-right: 4px;
+}
+
+.pet-detail-basic-characteristics-list {
+  & > li {
+    display: inline-block;
+    float: left;
+  }
+
+  @media #{$medium} {
+    white-space: nowrap;
+    & > li {
+      float: none;
+    }
+  }
+}
+
+.pet-detail-extra-data-item {
+  margin-bottom: $margin-default;
+}

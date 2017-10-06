@@ -1,0 +1,53 @@
+$icon-font-path: '../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+@import './bootstrap/variables';
+
+// # font
+$roboto: 'Roboto', sans-serif;
+
+// # colors
+$brand-primary: #ff5027;
+$brand-primary-dark: #bf3c1d !default;
+$brand-accent: #ff3d00 !default;
+$bg-dark: #263238 !default;
+$dark-grey: #111f21;
+$grey: #767676;
+$grey-blue: #1b3035;
+$light-grey: #bdbdbd !default;
+$text-color: #424242;
+$text-color-light: #fff;
+$white: #fff;
+
+$orange-light: #ff6739;
+$orange: #ff4f1f;
+
+// # margins - padding
+$margin-default: 15px !default;
+
+// # media queries
+// Custom, iPhone Retina
+$iphone: '(min-width: 320px)';
+// Extra Small Devices, Phones
+$extra-small: '(min-width: #{$screen-xs})';
+// Small Devices, Tablets
+$small: '(min-width: #{$screen-sm})';
+// Medium Devices, Desktops
+$medium: '(min-width: #{$screen-md})';
+// Large Devices, Wide Screens
+$large: '(min-width: #{$screen-lg})';
+
+// z-index
+$z-layers: (
+  'default':            1,
+  'below':             -1,
+  'bottomless-pit': -9000,
+  'pet-map':            2,
+  'pet-map-button':     3
+);
+
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+  }
+
+  @return map-get($z-layers, $layer);
+}

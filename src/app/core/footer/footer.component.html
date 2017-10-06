@@ -1,0 +1,37 @@
+<footer class="main-footer">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-xs-12">
+        <looky-social-links></looky-social-links>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="main-footer-logo center-block">
+          <img src="../../../assets/svg/logo-footer.svg" alt="Looky Logo">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <nav>
+          <ul class="nav nav-pills nav-main-footer">
+            <li class="nav-main-footer-li" routerLinkActive="active" *ngFor="let item of menuItems">
+              <a class="nav-main-footer-li-item" [routerLink]="[item.path]">{{ item.name }}</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <p class="footer-copy-right text-white">© 2017 Looky</p>
+      </div>
+    </div>
+
+  </div>
+</footer>

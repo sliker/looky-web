@@ -1,0 +1,60 @@
+@import "../../../sass/variables";
+@import "../../../sass/mixins";
+
+.main-footer {
+  background-color: $dark-grey;
+}
+
+.main-footer-logo {
+  width: 100px;
+}
+
+.nav-main-footer {
+  display: table;
+  margin: 0 auto 20px;
+
+  & > li {
+    & > a {
+      color: $grey;
+    }
+  }
+}
+
+.nav-main-footer-li-item {
+  @include speed-fast;
+  color: $grey;
+  font-weight: 300;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $light-grey !important;
+  }
+}
+
+// hosts overwrites
+:host /deep/ .navbar-nav {
+  display: table;
+  float: none !important;
+  margin: 60px auto 20px !important;
+
+  & > li {
+    float: left;
+    margin: 0 5px;
+
+    @media #{$small} {
+      margin: 0 15px;
+    }
+
+    & > a {
+      border: 2px solid $white;
+      border-radius: 50%;
+      font-size: 30px;
+      height: 50px;
+      line-height: 52px;
+      padding: 0;
+      text-align: center;
+      width: 50px;
+    }
+  }
+}

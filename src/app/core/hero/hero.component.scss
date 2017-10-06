@@ -1,0 +1,62 @@
+@import "../../../sass/variables";
+
+.hero-container {
+  background: $dark-grey url(../../../assets/img/bg/bg-hero.jpg) center center;
+  padding: 80px 0;
+}
+
+.hero-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+
+  @media #{$medium} {
+    font-size: 36px;
+  }
+
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 0;
+  text-transform: uppercase;
+
+  @media #{$medium} {
+    font-size: 28px;
+  }
+}
+
+.hero-mockup-image {
+  max-height: 400px;
+
+  @media #{$small} {
+    max-height: 550px;
+  }
+
+  @media #{$medium} {
+    max-height: 800px;
+  }
+}
+
+.hero-text {
+  padding-top: 30px;
+
+  @media #{$small} {
+    padding-top: 50px;
+  }
+
+  @media #{$medium} {
+    padding-top: 100px;
+  }
+
+  @media #{$large} {
+    padding-top: 150px;
+  }
+}
+
+// hosts overwrites
+:host /deep/ .get-app-button-container {
+  text-align: left;
+}

@@ -1,0 +1,18 @@
+<div class="share-buttons-container">
+    <p>
+        {{ 'SHARE.TITLE' | translate }}:
+    </p>
+
+    <ul class="nav nav-pills share-buttons-list">
+        <li class="share-buttons-list-item share-buttons-list-item-facebook">
+            <a (click)="shareOnFacebook()">
+                <i class="icon icon-Facebook"></i>Facebook
+            </a>
+        </li>
+        <li class="share-buttons-list-item share-buttons-list-item-twitter">
+            <a href="https://twitter.com/intent/tweet?url={{ urlToShare }}&via=Looky_Pets&text={{ caption }}">
+                <i class="icon icon-Twitter"></i>Twitter
+            </a>
+        </li>
+    </ul>
+</div>

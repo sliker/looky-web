@@ -1,0 +1,48 @@
+<header class="header-main">
+  <nav class="navbar navbar-main">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" (click)="toggleMainMenu()">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" [routerLink]="['/home']">
+          <img class="header-main-logo" src="../../../assets/img/looky-logo-white.png" alt="Logo Looky App" />
+        </a>
+      </div>
+
+      <div class="navbar-collapse {{ initialized ? '' : 'collapse-hidden' }} {{ collapsing ? 'collapsing' : 'collapse' }} {{ collapsed ? '' : 'in' }}"
+           id="main-navbar-collapse" #mainNavBarCollapse>
+        <looky-social-links></looky-social-links>
+
+        <ul class="nav navbar-nav navbar-right header-main-navbar-nav">
+
+          <li class="header-main-navbar-list" routerLinkActive="active">
+            <a class="header-main-navbar-list-item" routerLink="/home">
+              {{ 'MAIN_MENU.HOME' | translate }}
+            </a>
+          </li>
+
+          <li class="header-main-navbar-list" routerLinkActive="active">
+            <a class="header-main-navbar-list-item" (click)="goToPageAndScrollToSection('how-works', '/home')">
+              {{ 'MAIN_MENU.HOW_WORKS' | translate }}
+            </a>
+          </li>
+
+          <li class="header-main-navbar-list" routerLinkActive="active">
+            <a class="header-main-navbar-list-item" target="_blank"
+               href="https://play.google.com/store/apps/details?id=com.pets.looky">
+              {{ 'MAIN_MENU.DOWNLOAD' | translate }}
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+</header>

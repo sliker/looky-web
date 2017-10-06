@@ -1,0 +1,19 @@
+<section class="pet-detail-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="pet-detail-header-title-container text-center" *ngIf="petKind">
+                    <h1 class="pet-detail-header-title">
+                        {{ petKind | translate }}
+                        <span class="orange">
+                            {{ (petType === 0) ? ('PET_DETAIL.LOST' | translate) : ('PET_DETAIL.FOUND' | translate) }}
+                        </span>
+                    </h1>
+                    <span class="pet-detail-header-publish-date">
+                        {{ 'PET_DETAIL.PUBLISHED' | translate }}: {{ publishDate | date:'longDate' }}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

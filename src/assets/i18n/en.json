@@ -1,0 +1,94 @@
+{
+  "DOWNLOAD_APP_ALT": "Download Looky App",
+  "MAIN_MENU": {
+    "HOME": "Home",
+    "HOW_WORKS": "How works",
+    "CONTACT_US": "Contact us",
+    "DOWNLOAD": "Download"
+  },
+  "HERO": {
+    "TITLE": "Find your<br /><span class='orange'>lost pet</span>",
+    "SUBTITLE": "Or help other families<br />find theirs",
+    "DESCRIPTION": "Looky is a collaborative app that allows you to quickly and accurately report lost or found dogs and cats, so that users who are nearby will help you to return them home. It is your chance to help and bring back happiness to people and pets. It's free and very easy to use!"
+  },
+  "HOME": {
+    "INTRO": "<h2>What is Looky?</h2><p>Looky is an Android app (coming soon to iOS) that allows you to easily and quickly publish the report of lost and found pets, to help them to return home.</p><h2>Features</h2><ul><li>Filter search</li><li>Location of the pet in Google Maps</li><li>Real-time pet published notification</li><li>Live chat</li><li>Share on social networks</li></ul><p class='text-center'><strong>Get the app.</strong></p>"
+  },
+  "PET_DETAIL": {
+    "PUBLISHED": "Published",
+    "PUBLISHED_BY": "Published by",
+    "LOST": "Lost",
+    "FOUND": "Found",
+    "DOG": "Dog",
+    "CAT": "Cat",
+    "LOST_ON": "Was lost on",
+    "FOUND_ON": "Was found on",
+    "LOST_AT": "was lost at",
+    "FOUND_AT": "was found at",
+    "DESCRIPTION_LABEL": "Description",
+    "ADVICE_LABEL": "Advice",
+    "CHIP_LABEL": "Chip number",
+    "PET_AGE_PUPPY": "Puppy",
+    "PET_AGE_ADULT": "Adult",
+    "PET_AGE_SENIOR": "Aged",
+    "PET_SIZE_SMALL": "Small",
+    "PET_SIZE_MEDIUM": "Medium",
+    "PET_SIZE_LARGE": "Large",
+    "PET_GENDER_MALE": "Male",
+    "PET_GENDER_FEMALE": "Female",
+    "PET_GENDER_BREED": "Breed",
+    "PET_ADDRESS": "Address",
+    "PET_NEIGHBORHOOD": "Neighborhood",
+    "PET_CITY": "City",
+    "GENDER": "Gender",
+    "SIZE": "Size",
+    "AGE": "Age",
+    "NAME": "Name",
+    "LOCATION_LABEL": "Location",
+    "RETRIEVED": "Was already retrieved"
+  },
+  "NOT_FOUND": {
+    "TITLE": "404 Page not found",
+    "COPY": "Sorry. The requested URL {{ value }} was not found on this server."
+  },
+  "DIVIDER_COPY": {
+    "DEFAULT": "Help them to <span class='orange'>return</span> home!"
+  },
+  "HOW_WORKS": {
+    "TITLE": "How works?",
+    "ITEMS": {
+      "SEARCH": {
+        "TITLE": "Find reports in your area",
+        "DESCRIPTION": "You can track down pets that are lost or found by others according to your location."
+      },
+      "LOCATION": {
+        "TITLE": "Instant notifications",
+        "DESCRIPTION": "Application users in the zone will receive an immediate alert notification once each report is generated."
+      },
+      "MESSAGES": {
+        "TITLE": "Real time messages",
+        "DESCRIPTION": "Interact with other users in real time through the messaging system, so you can get in touch with the people who generated the reports."
+      },
+      "PETS": {
+        "TITLE": "Pet reports",
+        "DESCRIPTION": "Generates reports of lost or found dogs or cats, with a very simple form based on their characteristics, photograph and exact location."
+      },
+      "SHARE": {
+        "TITLE": "Sharing is caring",
+        "DESCRIPTION": "Share on social networks reports of pets so that more people will find out and help bring them home."
+      },
+      "LOVE": {
+        "TITLE": "We need your help",
+        "DESCRIPTION": "It is not necessary to have a lost pet to use Looky, your help will serve to bring happiness to many people and their pets. Download it now!"
+      }
+    }
+  },
+  "DOWNLOAD_CTA": {
+    "TITLE": "Download the <span class='orange'>app</span><br />completely <span class='orange'>free</span>"
+  },
+  "SHARE": {
+    "TITLE": "Share",
+    "PET_LOST_CAPTION": "{{ value }} has been lost in {{ city }}",
+    "PET_FOUND_CAPTION": "A {{ value }} pet has been found in {{ city }}"
+  }
+}

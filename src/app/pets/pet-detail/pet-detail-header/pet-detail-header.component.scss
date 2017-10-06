@@ -1,0 +1,32 @@
+@import "../../../../sass/variables";
+
+.pet-detail-header {
+  background: $dark-grey url(../../../../assets/img/bg/bg-hero.jpg) center center;
+  height: 250px;
+  padding: 100px 0 40px;
+
+  @media #{$medium} {
+    height: 360px;
+    padding: 220px 0 40px;
+  }
+}
+
+.pet-detail-header-title-container {
+  color: $white;
+  text-transform: uppercase;
+}
+
+.pet-detail-header-title {
+  font-size: 36px;
+  font-weight: 700;
+
+  @media #{$medium} {
+    font-size: 54px;
+  }
+}
+
+.pet-detail-header-publish-date {
+  color: $white;
+  font-size: 14px;
+  font-weight: 300;
+}

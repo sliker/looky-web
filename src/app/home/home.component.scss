@@ -1,0 +1,11 @@
+$home-bg: #fff;
+
+:host /deep/ .get-app-button-container {
+    text-align: center;
+}
+
+.home-container {
+  background-color: $home-bg;
+  border-radius: 5px;
+  padding: 15px;
+}

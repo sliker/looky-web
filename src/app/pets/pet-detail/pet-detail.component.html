@@ -1,0 +1,220 @@
+<looky-pet-detail-header
+  [publishDate]="pet?.publishDate"
+  [petType]="pet?.petType"
+  [petKind]="(pet && petKind) ? petKind : ''">
+</looky-pet-detail-header>
+
+<div class="container" *ngIf="loading || notFound">
+  <div class="row">
+    <div class="col-xs-12">
+      <looky-loading [loading]="loading"></looky-loading>
+      <looky-not-found *ngIf="notFound"></looky-not-found>
+    </div>
+  </div>
+</div>
+
+<div class="container pet-detail-container" *ngIf="!(loading) && !(notFound)">
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <div class="pet-detail-main-image-container">
+        <img alt="{{ pet?.petName }}" class="img-responsive pet-detail-main-image"
+             (error)="setImagePlaceholder($event)"
+             src="{{ pet?.petPictureUrl }}"/>
+        <button class="pet-detail-map-btn" (click)="onToggleMap()"
+                title="{{ 'PET_DETAIL.LOCATION_LABEL' | translate }}">
+          <span class="sr-only">{{ 'PET_DETAIL.LOCATION_LABEL' | translate }}</span>
+          <i class="icon-Pin"></i>
+        </button>
+
+        <div *ngIf="showMap" class="pet-detail-map-location-container">
+          <div id="pet-map" class="pet-detail-map-location"></div>
+        </div>
+
+        <div class="pet-detail-date-container {{ (petRetrieved) ? 'pet-detail-date-container-retrieved' : '' }}"
+             (click)="onToggleMap()">
+          <div class="media">
+            <div class="media-left">
+              <i class="icon {{ (pet?.petType === 0) ? 'icon-Lost' : 'icon-Found' }}"></i>
+            </div>
+            <div class="media-body">
+              <p class="pet-detail-date" *ngIf="!petRetrieved">
+                <span class="pet-detail-label-small">
+                    {{ (pet?.petType === 0) ? ('PET_DETAIL.LOST' | translate) : ('PET_DETAIL.FOUND' | translate) }}:
+                </span>
+                <br/>
+                <span class="pet-detail-label-medium">
+                    {{ pet?.petDate | date:'longDate' }}
+                </span>
+              </p>
+
+              <p class="pet-detail-date" *ngIf="petRetrieved">
+                <span class="pet-detail-label-small">
+                    {{ (pet?.petType === 0) ? pet?.petName : pet?.petBreed }}
+                </span>
+                <br/>
+                <span class="pet-detail-label-medium">
+                    {{ 'PET_DETAIL.RETRIEVED' | translate }}
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <looky-share-buttons
+        *ngIf="!petRetrieved"
+        [caption]="(pet?.petType === 0) ? ('SHARE.PET_LOST_CAPTION' | translate:shareValue) : ('SHARE.PET_FOUND_CAPTION' | translate:shareValue)">
+      </looky-share-buttons>
+    </div>
+
+    <div class="col-xs-12 col-md-6">
+
+      <div class="pet-detail-user-data-container" *ngIf="(user)">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="media">
+              <div class="media-left">
+                <img *ngIf="user.profilePictureUrl" class="img-circle pet-detail-user-photo"
+                     src="{{ user.profilePictureUrl }}"
+                     alt="{{ user.displayName }}"/>
+              </div>
+              <div class="media-body">
+                <div class="pet-detail-publish-date">
+                  {{ 'PET_DETAIL.PUBLISHED_BY' | translate }}:
+                </div>
+                <div class="pet-detail-user-display-name">{{ user.displayName }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pet-detail-basic-information" *ngIf="pet?.petType === 0">
+        <div class="pet-detail-name-label pet-detail-label-small">
+          {{ 'PET_DETAIL.NAME' | translate }}:
+        </div>
+        <div class="pet-detail-name pet-detail-label-big">
+          {{ (pet?.petType === 0) ? pet?.petName : pet?.petBreed }}
+        </div>
+      </div>
+
+      <div class="pet-detail-basic-characteristics">
+        <div class="row">
+          <div class="col-xs-4" *ngIf="petGender">
+            <div class="pet-detail-basic-characteristic-gender">
+              <ul class="nav pet-detail-basic-characteristics-list">
+                <li><i class="pet-detail-characteristic-icon {{ petGenderIcon }}"></i></li>
+                <li>
+                  <div class="pet-detail-label-small">
+                    {{ 'PET_DETAIL.GENDER' | translate }}:
+                  </div>
+                  <div class="pet-detail-label-medium">
+                    {{ petGender | translate }}
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xs-4" *ngIf="pet?.petKind === 0">
+            <div class="pet-detail-basic-characteristic-size">
+              <ul class="nav pet-detail-basic-characteristics-list">
+                <li><i class="pet-detail-characteristic-icon {{ petSizeIcon }}"></i></li>
+                <li>
+                  <div class="pet-detail-label-small">
+                    {{ 'PET_DETAIL.SIZE' | translate }}:
+                  </div>
+                  <div class="pet-detail-label-medium">
+                    {{ petSize | translate }}
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xs-4">
+            <div class="pet-detail-basic-characteristic-age">
+              <ul class="nav pet-detail-basic-characteristics-list">
+                <li><i class="pet-detail-characteristic-icon {{ petAgeIcon }}"></i></li>
+                <li>
+                  <div class="pet-detail-label-small">
+                    {{ 'PET_DETAIL.AGE' | translate }}:
+                  </div>
+                  <div class="pet-detail-label-medium">
+                    {{ petAge | translate }}
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pet-detail-extra-data">
+
+        <div *ngIf="pet?.petBreed" class="pet-detail-extra-data-item">
+          <p>
+            <strong class="pet-detail-label-small">{{ 'PET_DETAIL.PET_GENDER_BREED' | translate }}:</strong>
+            <br>
+            <span class="pet-detail-label-medium">{{ pet?.petBreed }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="pet?.petAddress" class="pet-detail-extra-data-item">
+          <p>
+            <strong class="pet-detail-label-small">{{ 'PET_DETAIL.PET_ADDRESS' | translate }}:</strong>
+            <br>
+            <span class="pet-detail-label-medium">{{ pet?.petAddress }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="pet?.petNeighborhood" class="pet-detail-extra-data-item">
+          <p>
+            <strong class="pet-detail-label-small">{{ 'PET_DETAIL.PET_NEIGHBORHOOD' | translate }}:</strong>
+            <br>
+            <span class="pet-detail-label-medium">{{ pet?.petNeighborhood }}</span>
+          </p>
+        </div>
+
+        <div *ngIf="pet?.petCity" class="pet-detail-extra-data-item">
+          <p>
+            <strong class="pet-detail-label-small">{{ 'PET_DETAIL.PET_CITY' | translate }}:</strong>
+            <br>
+            <span class="pet-detail-label-medium">
+                {{ pet?.petCity }} - {{ pet?.petState }}, {{ pet?.petCountry }}
+            </span>
+          </p>
+        </div>
+
+        <div *ngIf="pet?.petDescription" class="pet-detail-extra-data-item">
+          <p>
+            <strong class="pet-detail-label-small">{{ 'PET_DETAIL.DESCRIPTION_LABEL' | translate }}:</strong>
+            <br>
+            {{ pet?.petDescription }}
+          </p>
+        </div>
+
+        <div *ngIf="pet?.petAdvice" class="pet-detail-extra-data-item">
+          <p>
+            <strong class="pet-detail-label-small">{{ 'PET_DETAIL.ADVICE_LABEL' | translate }}:</strong>
+            <br>
+            {{ pet?.petAdvice }}
+          </p>
+        </div>
+
+        <div *ngIf="pet?.petChipNumber" class="pet-detail-extra-data-item">
+          <p>
+            <strong class="pet-detail-label-small">{{ 'PET_DETAIL.CHIP_LABEL' | translate }}:</strong>
+            <br>
+            {{ pet?.petChipNumber }}
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<looky-divider-copy></looky-divider-copy>
+<looky-download-cta></looky-download-cta>

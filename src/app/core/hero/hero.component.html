@@ -1,0 +1,37 @@
+<div class="hero-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+
+                <div class="hero-text">
+                    <h2 class="hero-title text-white">
+                        <span [innerHtml]="'HERO.TITLE' | translate"></span>
+                    </h2>
+                    <h3 class="hero-subtitle text-white">
+                        <span [innerHtml]="'HERO.SUBTITLE' | translate"></span>
+                    </h3>
+                    <div class="title-dots">
+                        <img src="../../../assets/svg/dots.svg" alt="dots title separator">
+                    </div>
+
+                    <p class="lead text-white">
+                        {{ 'HERO.DESCRIPTION' | translate }}
+                    </p>
+
+                    <div class="download-button">
+                        <looky-get-app-button></looky-get-app-button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-sm-6">
+                <div class="hero-mockup-container">
+                    <img class="hero-mockup-image img-responsive center-block" alt="Looky App"
+                         src="../../../assets/img/hero-mockup.png">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+{
+  "DOWNLOAD_APP_ALT": "Descargar Looky App",
+  "MAIN_MENU": {
+    "HOME": "Inicio",
+    "HOW_WORKS": "Cómo funciona",
+    "CONTACT_US": "Contáctanos",
+    "DOWNLOAD": "Descargar"
+  },
+  "HERO": {
+    "TITLE": "Encuentra tu<br /><span class='orange'>mascota perdida</span>",
+    "SUBTITLE": "O ayuda a otras familias<br />a encontrar la suya",
+    "DESCRIPTION": "Looky es una aplicación colaborativa que te permite reportar de manera ágil y exacta perros y gatos extraviados o que hayas encontrado, para que los usuarios que estén cerca te ayuden a regresarlos a casa. Es tu oportunidad de ayudar y devolver la felicidad a personas y mascotas. ¡Es gratis y muy fácil de usar!"
+  },
+  "HOME": {
+    "INTRO": "<h2>¿Qué es Looky?</h2><p>Looky es una app para Android (próximamente iOS) que permite publicar de manera fácil y rápida el reportede mascotas perdidas y encontradas, con el fin de ayudarlas a que regresen a su hogar.</p><h2>Características</h2><ul><li>Filtrar búsqueda</li><li>Ubicación de la mascota en Google Maps</li><li>Notificación de publicación en tiempo real</li><li>Chat en tiempo real</li><li>Compartir en redes sociales</li></ul><p class='text-center'><strong>Descargar app.</strong></p>"
+  },
+  "PET_DETAIL": {
+    "PUBLISHED": "Publicado el",
+    "PUBLISHED_BY": "Publicado por",
+    "LOST": "Perdido",
+    "FOUND": "Encontrado",
+    "DOG": "Perro",
+    "CAT": "Gato",
+    "LOST_ON": "Se perdió el",
+    "FOUND_ON": "Se encontró el",
+    "LOST_AT": "se perdió en",
+    "FOUND_AT": "se encontró en",
+    "DESCRIPTION_LABEL": "Descripción",
+    "ADVICE_LABEL": "Recomendaciones",
+    "CHIP_LABEL": "Número de chip",
+    "PET_AGE_PUPPY": "Cachorro",
+    "PET_AGE_ADULT": "Adulto",
+    "PET_AGE_SENIOR": "Mayor",
+    "PET_SIZE_SMALL": "Pequeño",
+    "PET_SIZE_MEDIUM": "Mediano",
+    "PET_SIZE_LARGE": "Grande",
+    "PET_GENDER_MALE": "Macho",
+    "PET_GENDER_FEMALE": "Hembra",
+    "PET_GENDER_BREED": "Raza",
+    "PET_ADDRESS": "Dirección",
+    "PET_NEIGHBORHOOD": "Barrio",
+    "PET_CITY": "Ciudad",
+    "GENDER": "Género",
+    "SIZE": "Tamaño",
+    "AGE": "Edad",
+    "NAME": "Nombre",
+    "LOCATION_LABEL": "Ubicación",
+    "RETRIEVED": "Ya fue recuperado"
+  },
+  "NOT_FOUND": {
+    "TITLE": "404 Página no encontrada",
+    "COPY": "Lo sentimos. La URL {{ value }} no fue encontrada en el servidor."
+  },
+  "DIVIDER_COPY": {
+    "DEFAULT": "¡Ayúdales a que <span class='orange'>regresen</span> a su hogar!"
+  },
+  "HOW_WORKS": {
+    "TITLE": "¿Cómo funciona?",
+    "ITEMS": {
+      "SEARCH": {
+        "TITLE": "Busca reportes en tu zona",
+        "DESCRIPTION": "Puedes rastrear mascotas que estén pérdidas o que hayan sido encontradas por otras personas de acuerdo con tu ubicación."
+      },
+      "LOCATION": {
+        "TITLE": "Notificaciones instantáneas",
+        "DESCRIPTION": "Los usuarios de la aplicación que estén en la zona recibirán una notificación de alerta inmediata una vez se genere cada reporte."
+      },
+      "MESSAGES": {
+        "TITLE": "Mensajes en tiempo real",
+        "DESCRIPTION": "Interactúa con otros usuarios en tiempo real a través del sistema de mensajería, así podrás ponerte en contacto con las personas que generaron los reportes."
+      },
+      "PETS": {
+        "TITLE": "Reporta mascotas",
+        "DESCRIPTION": "Genera reportes de perros o gatos perdidos o encontrados, con un formulario muy simple a partir de sus características, fotografía y ubicación exacta."
+      },
+      "SHARE": {
+        "TITLE": "Compartir es ayudar",
+        "DESCRIPTION": "Comparte en redes sociales los reportes de mascotas para que más personas se enteren y ayuden a regresarlos a casa."
+      },
+      "LOVE": {
+        "TITLE": "Necesitamos de tu ayuda",
+        "DESCRIPTION": "No es necesario que tengas una mascota perdida para usar Looky, tu ayuda servirá para devolver la felicidad a muchas personas y sus mascotas. ¡Descárgala ya!"
+      }
+    }
+  },
+  "DOWNLOAD_CTA": {
+    "TITLE": "Descarga la <span class='orange'>app</span><br />completamente <span class='orange'>gratis</span>"
+  },
+  "SHARE": {
+    "TITLE": "Compartir",
+    "PET_LOST_CAPTION": "{{ value }} se ha perdido en {{ city }}",
+    "PET_FOUND_CAPTION": "Un {{ value }} ha sido encontrado en {{ city }}"
+  }
+}

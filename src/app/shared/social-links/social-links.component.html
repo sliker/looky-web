@@ -1,0 +1,10 @@
+<ul class="nav navbar-nav navbar-right social-navbar">
+
+    <li class="social-navbar-list" *ngFor="let item of menuSocialItems">
+        <a href="{{ item.path }}" target="_blank" class="social-navbar-list-item track-social">
+            <span class="sr-only">{{ item.name }}</span>
+            <span class="{{ item.iconClass }}"></span>
+        </a>
+    </li>
+
+</ul>

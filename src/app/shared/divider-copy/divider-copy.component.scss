@@ -1,0 +1,13 @@
+@import "../../../sass/variables";
+
+.divider-copy-container {
+  background-color: $grey-blue;
+  padding: 40px 0;
+}
+
+.divider-copy {
+  color: $white;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+}

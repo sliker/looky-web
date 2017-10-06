@@ -1,0 +1,91 @@
+@import "../../../sass/variables";
+
+.navbar-brand {
+  height: 85px;
+  padding: 10px 15px;
+}
+
+.navbar-main {
+  .navbar-toggle {
+    background-color: $white;
+    border-color: #ddd;
+    margin: 26px 15px;
+    .icon-bar {
+      background-color: $grey;
+    }
+  }
+
+  .navbar-collapse {
+    background-color: $grey-blue;
+
+    @media #{$small} {
+      background-color: transparent;
+    }
+  }
+}
+
+.header-main {
+  position: absolute;
+  width: 100%;
+  z-index: z('default');
+}
+
+:host /deep/ .get-app-button-container {
+  text-align: center;
+  @media #{$small} {
+    text-align: right;
+  }
+}
+
+.header-main-logo {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+}
+
+.header-main-navbar-nav {
+  margin-top: 10px;
+
+  @media #{$small} {
+    margin-top: 20px;
+  }
+}
+
+.header-main-navbar-list {
+  margin-left: 0;
+  margin-right: 0;
+
+  @media #{$small} {
+    margin-left: 10px;
+  }
+}
+
+.header-main-navbar-list-item {
+  border-radius: 8px;
+  color: $white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 14px;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: transparent;
+
+    @media #{$small} {
+      background-color: $orange;
+    }
+  }
+
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+// hosts overwrites
+:host /deep/ .social-navbar {
+  display: none;
+
+  @media #{$small} {
+    display: block;
+  }
+}

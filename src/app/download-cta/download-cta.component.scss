@@ -1,0 +1,26 @@
+@import "../../sass/variables";
+
+.download-cta-container {
+  background: url(../../assets/img/bg/bg-download.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 30px 0;
+
+  @media #{$medium} {
+    padding: 90px 0;
+  }
+}
+
+.download-cta-title {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @media #{$medium} {
+    font-size: 46px;
+  }
+}
+
+// hosts overwrites
+:host /deep/ .get-app-button-container {
+  text-align: left;
+}

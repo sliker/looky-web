@@ -1,0 +1,42 @@
+@import "../../../sass/variables";
+
+$facebook-color: #3b5998;
+$twitter-color: #1da1f2;
+
+.share-buttons-list {
+  margin-bottom: 20px;
+}
+
+.share-buttons-list-item {
+  border-radius: 5px;
+  margin-right: 15px;
+  text-transform: uppercase;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  a {
+    color: $white;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $brand-primary;
+    }
+  }
+
+  .icon {
+    font-size: 20px;
+    margin-right: 5px;
+    vertical-align: sub;
+  }
+}
+
+.share-buttons-list-item-facebook {
+  background-color: $facebook-color;
+}
+
+.share-buttons-list-item-twitter {
+  background-color: $twitter-color;
+}

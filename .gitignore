@@ -4,9 +4,14 @@
 /dist
 /tmp
 /out-tsc
+/functions/dist-server
+/functions/index.html
+/functions/index.js
+/functions/assets
 
 # dependencies
 /node_modules
+/functions/node_modules
 
 # IDEs and editors
 /.idea
